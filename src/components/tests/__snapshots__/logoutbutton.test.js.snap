@@ -1,0 +1,6 @@
+exports[`test should match snapshot 1`] = `
+<button
+  onClick={[Function]}>
+  Log out
+</button>
+`;
