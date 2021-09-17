@@ -1,6 +1,15 @@
 exports[`test should match snapshot 1`] = `
-<h1
-  onClick={[Function]}>
-  Log in
-</h1>
+<div
+  className="col-lg-12"
+  style={
+    Object {
+      "padding": "10px",
+    }
+  }>
+  <input
+    className="btn btn-lg btn-primary btn-block container-fluid"
+    onClick={[Function]}
+    readOnly={true}
+    value="Sign In" />
+</div>
 `;

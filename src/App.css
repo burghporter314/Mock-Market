@@ -14,3 +14,17 @@ button {
   width: 120px;
   cursor: pointer;
 }
+
+div.login-form {
+  background-color: #eee;
+  padding: 40px;
+  border-radius: 20px;
+  max-width: 400px;
+  box-shadow: 10px 10px grey;
+}
+
+.center-block {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}

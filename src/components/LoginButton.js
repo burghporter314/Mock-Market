@@ -5,9 +5,9 @@ const LoginButton = () => {
     const { loginWithRedirect } = useAuth0();
 
     return(
-        <button onClick={() => loginWithRedirect()}>
-            Log in
-        </button>
+        <div className="col-lg-12" style={{ "padding": "10px" }}>
+            <input onClick={() => loginWithRedirect()} className="btn btn-lg btn-primary btn-block container-fluid" value="Sign In" readOnly></input>
+        </div>
     );
 }
 

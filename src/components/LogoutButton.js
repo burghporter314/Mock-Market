@@ -5,9 +5,9 @@ const LogoutButton = () => {
     const { logout } = useAuth0();
 
     return(
-        <button onClick={() => logout()}>
-            Log out
-        </button>
+        <div className="col-lg-4" style={{ "padding": "10px" }}>
+            <input onClick={() => logout()} className="btn btn-lg btn-danger btn-block container-fluid" value="Log out" readOnly></input>
+        </div>
     );
 }
 

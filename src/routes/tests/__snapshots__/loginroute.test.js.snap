@@ -1,0 +1,53 @@
+exports[`test should match snapshot 1`] = `
+<div
+  className="jumbotron vertical-center">
+  <div
+    className="container">
+    <div
+      className="row"
+      style={
+        Object {
+          "marginTop": "40px",
+        }
+      }>
+      <div
+        className="col-xs-12 col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3 login-form mx-auto">
+        <form
+          role="form">
+          <fieldset>
+            <h2>
+              Please Sign In
+            </h2>
+            <hr
+              className="colorgraph" />
+            <img
+              className="col-lg-6 img-fluid w-100 login-image center-block"
+              src="market.png"
+              style={
+                Object {
+                  "maxWidth": "210px",
+                }
+              } />
+            <div
+              className="row">
+              <div
+                className="col-lg-12"
+                style={
+                  Object {
+                    "padding": "10px",
+                  }
+                }>
+                <input
+                  className="btn btn-lg btn-primary btn-block container-fluid"
+                  onClick={[Function]}
+                  readOnly={true}
+                  value="Sign In" />
+              </div>
+            </div>
+          </fieldset>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+`;
