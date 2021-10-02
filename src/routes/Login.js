@@ -1,8 +1,17 @@
 import React from 'react';
 import LoginButton from '../components/LoginButton'
 import logo from '../assets/market.png'
+import { Redirect } from 'react-router-dom';
+import { useAuth0 } from '@auth0/auth0-react';
 
 const LoginPage = () => {
+
+    const { isAuthenticated } = useAuth0();
+    if(isAuthenticated) {
+        return(
+            <Redirect to={{pathname: "/main"}}/>
+        );
+    }
     return(
     <React.Fragment>
         <div className="jumbotron vertical-center">

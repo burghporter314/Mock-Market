@@ -8,6 +8,8 @@
     "@testing-library/react": "^12.1.0",
     "@testing-library/user-event": "^13.2.1",
     "bootstrap": "^5.1.1",
+    "dns": "^0.2.2",
+    "pg": "^8.7.1",
     "popper.js": "^1.16.1",
     "react": "^17.0.2",
     "react-bootstrap": "^1.6.3",
@@ -24,7 +26,8 @@
     "eject": "react-scripts eject"
   },
   "devDependencies": {
-    "@babel/plugin-transform-react-jsx": "^7.14.9"
+    "@babel/plugin-transform-react-jsx": "^7.14.9",
+    "react-app-rewired": "^2.1.8"
   },
   "browserslist": {
     "production": [

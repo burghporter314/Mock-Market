@@ -1,0 +1,257 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should match snapshot with empty headers and populated rows 1`] = `
+<table
+  className="table table-striped table-bordered table-hover"
+>
+  <thead>
+    <tr>
+      <th>
+        
+      </th>
+      <th>
+        
+      </th>
+      <th>
+        
+      </th>
+      <th>
+        
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        title
+      </td>
+      <td>
+        bought
+      </td>
+      <td>
+        current
+      </td>
+      <td>
+        amount
+      </td>
+    </tr>
+    <tr>
+      <td>
+        title
+      </td>
+      <td>
+        bought
+      </td>
+      <td>
+        current
+      </td>
+      <td>
+        amount
+      </td>
+    </tr>
+  </tbody>
+</table>
+`;
+
+exports[`should match snapshot with empty headers and rows 1`] = `
+<table
+  className="table table-striped table-bordered table-hover"
+>
+  <thead>
+    <tr>
+      <th>
+        
+      </th>
+      <th>
+        
+      </th>
+      <th>
+        
+      </th>
+      <th>
+        
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        
+      </td>
+      <td>
+        
+      </td>
+      <td>
+        
+      </td>
+      <td>
+        
+      </td>
+    </tr>
+    <tr>
+      <td>
+        
+      </td>
+      <td>
+        
+      </td>
+      <td>
+        
+      </td>
+      <td>
+        
+      </td>
+    </tr>
+  </tbody>
+</table>
+`;
+
+exports[`should match snapshot with partial headers and populated rows 1`] = `
+<table
+  className="table table-striped table-bordered table-hover"
+>
+  <thead>
+    <tr>
+      <th>
+        header1
+      </th>
+      <th>
+        header2
+      </th>
+      <th>
+        header3
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        title
+      </td>
+      <td>
+        bought
+      </td>
+      <td>
+        current
+      </td>
+      <td>
+        amount
+      </td>
+    </tr>
+    <tr>
+      <td>
+        title
+      </td>
+      <td>
+        bought
+      </td>
+      <td>
+        current
+      </td>
+      <td>
+        amount
+      </td>
+    </tr>
+  </tbody>
+</table>
+`;
+
+exports[`should match snapshot with populated headers and empty rows 1`] = `
+<table
+  className="table table-striped table-bordered table-hover"
+>
+  <thead>
+    <tr>
+      <th>
+        header1
+      </th>
+      <th>
+        header2
+      </th>
+      <th>
+        header3
+      </th>
+      <th>
+        header4
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        title
+      </td>
+      <td>
+        bought
+      </td>
+      <td>
+        current
+      </td>
+      <td>
+        amount
+      </td>
+    </tr>
+    <tr>
+      <td>
+        title
+      </td>
+      <td>
+        bought
+      </td>
+      <td>
+        current
+      </td>
+      <td>
+        amount
+      </td>
+    </tr>
+  </tbody>
+</table>
+`;
+
+exports[`should match snapshot with populated headers and partial rows 1`] = `
+<table
+  className="table table-striped table-bordered table-hover"
+>
+  <thead>
+    <tr>
+      <th>
+        header1
+      </th>
+      <th>
+        header2
+      </th>
+      <th>
+        header3
+      </th>
+      <th>
+        header4
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        title
+      </td>
+      <td>
+        bought
+      </td>
+      <td>
+        current
+      </td>
+    </tr>
+    <tr>
+      <td>
+        title
+      </td>
+      <td>
+        bought
+      </td>
+      <td>
+        current
+      </td>
+    </tr>
+  </tbody>
+</table>
+`;

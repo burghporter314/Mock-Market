@@ -1,0 +1,168 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should match snapshot 1`] = `
+Array [
+  <div
+    className="jumbotron"
+    style={
+      Object {
+        "margin": "30px",
+      }
+    }
+  >
+    <div
+      className="container main-form"
+    >
+      <form>
+        <h2>
+          Net Account Value: 
+        </h2>
+        <hr
+          className="colorgraph"
+        />
+        <div
+          className="row"
+        >
+          <div
+            className="form-group col-md-6"
+          >
+            <label>
+              Stock Value
+            </label>
+            <input
+              className="form-control"
+              id="inputCity"
+              readOnly={true}
+              type="text"
+            />
+          </div>
+          <div
+            className="form-group col-md-6"
+          >
+            <label>
+              Funds Remaining
+            </label>
+            <input
+              className="form-control"
+              id="inputZip"
+              readOnly={true}
+              type="text"
+            />
+          </div>
+        </div>
+        <hr />
+        <div
+          className="row"
+        >
+          <div
+            className="form-group col-md-4"
+          >
+            <label>
+              Total Profit
+            </label>
+            <input
+              className="form-control"
+              id="inputCity"
+              readOnly={true}
+              type="text"
+            />
+          </div>
+          <div
+            className="form-group col-md-4"
+          >
+            <label>
+              Total Deposit
+            </label>
+            <input
+              className="form-control"
+              id="inputZip"
+              readOnly={true}
+              type="text"
+            />
+          </div>
+          <div
+            className="form-group col-md-4"
+          >
+            <label>
+              % Change from Deposit
+            </label>
+            <input
+              className="form-control"
+              id="inputZip"
+              readOnly={true}
+              type="text"
+            />
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>,
+  <br />,
+  <div
+    className="jumbotron"
+  >
+    <div
+      className="container table-form"
+    >
+      <form>
+        <h2>
+          Transactions 
+        </h2>
+        <hr
+          className="colorgraph"
+        />
+        <table
+          className="table table-striped table-bordered table-hover"
+        >
+          <thead>
+            <tr>
+              <th>
+                Stock Ticker
+              </th>
+              <th>
+                Bought price
+              </th>
+              <th>
+                Current Price
+              </th>
+              <th>
+                Amount Bought
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                Sample
+              </td>
+              <td>
+                .70
+              </td>
+              <td>
+                .10
+              </td>
+              <td>
+                5
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Sample2
+              </td>
+              <td>
+                .80
+              </td>
+              <td>
+                .10
+              </td>
+              <td>
+                5
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </form>
+    </div>
+  </div>,
+]
+`;
