@@ -68,7 +68,8 @@ const MainPage = () => {
                             current: ".10",
                             amount: "5",
                         }]
-                    }></TransactionTable>
+                    }>
+                    </TransactionTable>
                 </form>
             </div>
         </div>

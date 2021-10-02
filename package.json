@@ -21,7 +21,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "coverage": "react-scripts test --env=jsdom \"--coverage\"",
+    "coverage": "react-scripts test --env=jsdom --coveragePathIgnorePatterns=index.js \"--coverage\" \"--watchAll\"",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   },

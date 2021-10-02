@@ -1,15 +1,19 @@
-exports[`test should match snapshot 1`] = `
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should match snapshot 1`] = `
 <div
   className="col-lg-12"
   style={
     Object {
       "padding": "10px",
     }
-  }>
+  }
+>
   <input
     className="btn btn-lg btn-primary btn-block container-fluid"
     onClick={[Function]}
     readOnly={true}
-    value="Sign In" />
+    value="Sign In"
+  />
 </div>
 `;
