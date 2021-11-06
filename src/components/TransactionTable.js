@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Table} from 'react-bootstrap';
+import { Table, Nav } from 'react-bootstrap';
 
 class TransactionTable extends Component {
     constructor(props) {
@@ -35,7 +35,7 @@ class TransactionTable extends Component {
                 </thead>
                 <tbody>
                     {(this.props.rows ? this.props.rows : this.state.rows).map((row, index) => (
-                        <tr key={index}>
+                        <tr key={index} onClick={this.props.processRowClick}>
                             {Object.keys(row).map((key, index) => (
                                 <td key={index}>{row[key]}</td>
                             ))}

@@ -1,0 +1,67 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should match snapshot 1`] = `
+Array [
+  <br />,
+  <br />,
+  <div
+    className="container"
+  >
+    <h1 />
+    <div
+      className="mb-3 input-group"
+    >
+      <span
+        className="input-group-text"
+        id="basic-addon2"
+      >
+        Stock Ticker
+      </span>
+      <input
+        aria-describedby="basic-addon2"
+        aria-label="Enter Stock Ticker"
+        className="form-control"
+        id="inputTicker"
+        placeholder="Enter Stock Ticker"
+      />
+      <button
+        className="btn btn-outline-success"
+        disabled={false}
+        id="button-addon2"
+        onClick={[Function]}
+        type="button"
+      >
+        Search
+      </button>
+    </div>
+    <br />
+    <table
+      className="table table-striped table-bordered table-hover"
+    >
+      <thead>
+        <tr>
+          <th>
+            Stock Ticker
+          </th>
+          <th>
+            Name
+          </th>
+          <th>
+            Type
+          </th>
+          <th>
+            Primary Exchange
+          </th>
+          <th>
+            Locale
+          </th>
+          <th>
+            Currency
+          </th>
+        </tr>
+      </thead>
+      <tbody />
+    </table>
+  </div>,
+]
+`;

@@ -16,6 +16,16 @@ Array [
       <form>
         <h2>
           Net Account Value: 
+          <span
+            style={
+              Object {
+                "color": "green",
+              }
+            }
+          >
+            $
+            0.00
+          </span>
         </h2>
         <hr
           className="colorgraph"
@@ -34,6 +44,7 @@ Array [
               id="inputCity"
               readOnly={true}
               type="text"
+              value="$0.00"
             />
           </div>
           <div
@@ -47,6 +58,7 @@ Array [
               id="inputZip"
               readOnly={true}
               type="text"
+              value="$0.00"
             />
           </div>
         </div>
@@ -55,7 +67,7 @@ Array [
           className="row"
         >
           <div
-            className="form-group col-md-4"
+            className="form-group col-md-6"
           >
             <label>
               Total Profit
@@ -65,10 +77,44 @@ Array [
               id="inputCity"
               readOnly={true}
               type="text"
+              value="$0.00"
             />
           </div>
           <div
-            className="form-group col-md-4"
+            className="form-group col-md-6"
+          >
+            <label>
+              % Change from account
+            </label>
+            <input
+              className="form-control"
+              id="inputZip"
+              readOnly={true}
+              type="text"
+              value="NaN%"
+            />
+          </div>
+        </div>
+        <br />
+        <div
+          className="row"
+        >
+          <div
+            className="form-group col-md-6"
+          >
+            <label>
+              Total Withdrawal
+            </label>
+            <input
+              className="form-control"
+              id="inputZip"
+              readOnly={true}
+              type="text"
+              value="$0"
+            />
+          </div>
+          <div
+            className="form-group col-md-6"
           >
             <label>
               Total Deposit
@@ -78,19 +124,7 @@ Array [
               id="inputZip"
               readOnly={true}
               type="text"
-            />
-          </div>
-          <div
-            className="form-group col-md-4"
-          >
-            <label>
-              % Change from Deposit
-            </label>
-            <input
-              className="form-control"
-              id="inputZip"
-              readOnly={true}
-              type="text"
+              value="$0"
             />
           </div>
         </div>
@@ -120,46 +154,29 @@ Array [
                 Stock Ticker
               </th>
               <th>
-                Bought price
+                Total Profit
+              </th>
+              <th>
+                Current Profit
+              </th>
+              <th>
+                Sold Profit
               </th>
               <th>
                 Current Price
               </th>
               <th>
-                Amount Bought
+                High Price
+              </th>
+              <th>
+                Low Price
+              </th>
+              <th>
+                Open Price
               </th>
             </tr>
           </thead>
-          <tbody>
-            <tr>
-              <td>
-                Sample
-              </td>
-              <td>
-                .70
-              </td>
-              <td>
-                .10
-              </td>
-              <td>
-                5
-              </td>
-            </tr>
-            <tr>
-              <td>
-                Sample2
-              </td>
-              <td>
-                .80
-              </td>
-              <td>
-                .10
-              </td>
-              <td>
-                5
-              </td>
-            </tr>
-          </tbody>
+          <tbody />
         </table>
       </form>
     </div>

@@ -26,8 +26,8 @@ div.login-form {
 div.main-form {
   background-color: white;
   padding: 50px;
-  border-radius: 40px;
-  border: 5px solid #eee;
+  border-radius: 30px;
+  border: 3px solid #eee;
 }
 
 div.table-form {
