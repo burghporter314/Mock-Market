@@ -16,7 +16,7 @@ const MainPage = (props) => {
     }
 
     // Handle user registration on login to make sure the username is in the system.
-    fetch(`http://localhost:5000/account?username=${user.nickname.toLowerCase()}`, {
+    fetch(`${domain}/account?username=${user.nickname.toLowerCase()}`, {
         method: 'POST',
         headers: {
         useQueryString: true
