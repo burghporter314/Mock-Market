@@ -7,6 +7,7 @@ import MainPage from './routes/Main';
 import SearchPage from './routes/Search';
 import NavbarHeader from './components/NavbarHeader';
 import { useAuth0 } from "@auth0/auth0-react";
+import InfoPage from './routes/Info';
 
 const App = () => {
   const {isLoading, user} = useAuth0();
@@ -15,7 +16,6 @@ const App = () => {
   if (isLoading) {
     return <p>Loading...</p>
   }
-
 
   return (
     <Router>
@@ -46,6 +46,16 @@ const App = () => {
               <React.Fragment>
                 <NavbarHeader />
                 <SearchPage {...props} />
+              </React.Fragment>
+            );
+          }
+        }/>
+        <Route exact path="/info" render={
+          (props) => {
+            return(
+              <React.Fragment>
+                <NavbarHeader />
+                <InfoPage {...props} />
               </React.Fragment>
             );
           }

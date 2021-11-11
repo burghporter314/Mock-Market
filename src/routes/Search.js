@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Redirect } from 'react-router-dom';
+import { Redirect, useHistory } from 'react-router-dom';
 import { useAuth0 } from '@auth0/auth0-react';
 import { InputGroup, FormControl, Button } from 'react-bootstrap';
 import TransactionTable from '../components/TransactionTable';
@@ -7,6 +7,7 @@ import TransactionTable from '../components/TransactionTable';
 const SearchPage = (props) => {
     const { isAuthenticated, user } = useAuth0();
     const domain = process.env.REACT_APP_SERVER_DOMAIN;
+    const history = useHistory();
 
     if(!isAuthenticated) {
         return(
@@ -80,7 +81,8 @@ const SearchPage = (props) => {
             <br />
             <TransactionTable
                 headers={["Stock Ticker", "Name", "Type", "Primary Exchange", "Locale", "Currency"]}
-                rows={getRows(initState.results)}>
+                rows={getRows(initState.results)}
+                processRowClick={(ticker) => () => history.push(`/info?ticker=${ticker}`)}>
             </TransactionTable>
         </div>
     </React.Fragment>

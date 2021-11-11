@@ -35,7 +35,7 @@ class TransactionTable extends Component {
                 </thead>
                 <tbody>
                     {(this.props.rows ? this.props.rows : this.state.rows).map((row, index) => (
-                        <tr key={index} onClick={this.props.processRowClick}>
+                        <tr key={index} onClick={this.props.processRowClick(row[0])}>
                             {Object.keys(row).map((key, index) => (
                                 <td key={index}>{row[key]}</td>
                             ))}

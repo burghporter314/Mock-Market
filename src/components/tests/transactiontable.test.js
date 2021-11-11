@@ -6,6 +6,7 @@ it('should match snapshot with empty headers and rows', () => {
     const component = renderer.create(
         <TransactionTable
         headers={["", "", "", ""]}
+        processRowClick={jest.fn()}
         rows={[
             {
                 title: "",
@@ -29,6 +30,7 @@ it('should match snapshot with empty headers and populated rows', () => {
     const component = renderer.create(
         <TransactionTable
         headers={["", "", "", ""]}
+        processRowClick={jest.fn()}
         rows={[
             {
                 title: "title",
@@ -52,6 +54,7 @@ it('should match snapshot with populated headers and empty rows', () => {
     const component = renderer.create(
         <TransactionTable
         headers={["header1", "header2", "header3", "header4"]}
+        processRowClick={jest.fn()}
         rows={[
             {
                 title: "title",
@@ -75,6 +78,7 @@ it('should match snapshot with populated headers and partial rows', () => {
     const component = renderer.create(
         <TransactionTable
         headers={["header1", "header2", "header3", "header4"]}
+        processRowClick={jest.fn()}
         rows={[
             {
                 title: "title",
@@ -96,6 +100,7 @@ it('should match snapshot with partial headers and populated rows', () => {
     const component = renderer.create(
         <TransactionTable
         headers={["header1", "header2", "header3"]}
+        processRowClick={jest.fn()}
         rows={[
             {
                 title: "title",

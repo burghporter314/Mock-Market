@@ -37,7 +37,7 @@ const MainPage = (props) => {
             }
         })
         .then(responseJson => responseJson.json())
-        .then(responseBody => {console.log(responseBody); setState({
+        .then(responseBody => {setState({
             ...initState,
             ...responseBody,
         })})
@@ -132,7 +132,8 @@ const MainPage = (props) => {
                     <TransactionTable
                     headers={["Stock Ticker", "Total Profit", "Current Profit", "Sold Profit", "Current Price", "High Price", "Low Price", "Open Price"]}
                     rows={getRows(initState.stocks)}
-                    processRowClick={() => history.push("/search")}>
+                    // We need a function that returns a function since the ticker is only known in the transaction table component.
+                    processRowClick={(ticker) => () => history.push(`/info?ticker=${ticker}`)}>
                     </TransactionTable>
                 </form>
             </div>

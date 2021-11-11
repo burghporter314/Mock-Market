@@ -8,7 +8,7 @@ jest.mock("@auth0/auth0-react");
 beforeEach(() => {
     useAuth0.mockReturnValue({
         isAuthenticated: true,
-        user: "testuser",
+        nickname: "testuser",
         logout: jest.fn(),
         loginWithRedirect: jest.fn()
     })
