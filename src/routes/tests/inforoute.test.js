@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import renderer from 'react-test-renderer';
 import { useAuth0 } from '@auth0/auth0-react';
-import SearchPage from '../Search';
+import InfoPage from '../Info';
 
 jest.mock("@auth0/auth0-react");
 
@@ -16,8 +16,16 @@ beforeEach(() => {
 
 it('should match snapshot', () => {
 
+    let props = {
+        location: {
+            search: "?ticker=ticker",
+        }
+    }
+
     const component = renderer.create(
-            <SearchPage/>
+            <InfoPage
+            {...props}
+            />
     );
     let tree = component.toJSON();
     expect(tree).toMatchSnapshot();

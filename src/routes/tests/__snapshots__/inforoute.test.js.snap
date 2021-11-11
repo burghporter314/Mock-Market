@@ -1,0 +1,367 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should match snapshot 1`] = `
+Array [
+  <div
+    className="jumbotron"
+    style={
+      Object {
+        "margin": "30px",
+      }
+    }
+  >
+    <div
+      className="container main-form"
+    >
+      <form>
+        <h2>
+          Ticker Information
+        </h2>
+        <hr
+          className="colorgraph"
+        />
+        <div
+          className="row"
+        >
+          <div
+            className="form-group col-md-6"
+          >
+            <label>
+              Ticker
+            </label>
+            <input
+              className="form-control"
+              id="inputCity"
+              readOnly={true}
+              type="text"
+              value="$ticker"
+            />
+          </div>
+          <div
+            className="form-group col-md-6"
+          >
+            <label>
+              Name
+            </label>
+            <input
+              className="form-control"
+              id="inputZip"
+              readOnly={true}
+              type="text"
+              value=""
+            />
+          </div>
+        </div>
+        <br />
+        <div
+          className="row"
+        >
+          <div
+            className="form-group col-md-3"
+          >
+            <label>
+              Current
+            </label>
+            <input
+              className="form-control"
+              id="inputCity"
+              readOnly={true}
+              type="text"
+              value="$0"
+            />
+          </div>
+          <div
+            className="form-group col-md-3"
+          >
+            <label>
+              High
+            </label>
+            <input
+              className="form-control"
+              id="inputZip"
+              readOnly={true}
+              type="text"
+              value="$0"
+            />
+          </div>
+          <div
+            className="form-group col-md-3"
+          >
+            <label>
+              Low
+            </label>
+            <input
+              className="form-control"
+              id="inputZip"
+              readOnly={true}
+              type="text"
+              value="$0"
+            />
+          </div>
+          <div
+            className="form-group col-md-3"
+          >
+            <label>
+              Open
+            </label>
+            <input
+              className="form-control"
+              id="inputZip"
+              readOnly={true}
+              type="text"
+              value="$0"
+            />
+          </div>
+        </div>
+        <br />
+        <div
+          className="row"
+        >
+          <div
+            className="form-group col-md-3"
+          >
+            <label>
+              Percent Change
+            </label>
+            <input
+              className="form-control"
+              id="inputCity"
+              readOnly={true}
+              type="text"
+              value="0.00%"
+            />
+          </div>
+          <div
+            className="form-group col-md-3"
+          >
+            <label>
+              Market Cap
+            </label>
+            <input
+              className="form-control"
+              id="inputZip"
+              readOnly={true}
+              type="text"
+              value="0"
+            />
+          </div>
+          <div
+            className="form-group col-md-3"
+          >
+            <label>
+              Type
+            </label>
+            <input
+              className="form-control"
+              id="inputZip"
+              readOnly={true}
+              type="text"
+              value=""
+            />
+          </div>
+          <div
+            className="form-group col-md-3"
+          >
+            <label>
+              Exchange
+            </label>
+            <input
+              className="form-control"
+              id="inputZip"
+              readOnly={true}
+              type="text"
+              value=""
+            />
+          </div>
+        </div>
+        <br />
+        <div
+          className="row"
+        >
+          <div
+            className="form-group col-md-3"
+          >
+            <label>
+              Country
+            </label>
+            <input
+              className="form-control"
+              id="inputCity"
+              readOnly={true}
+              type="text"
+              value=""
+            />
+          </div>
+          <div
+            className="form-group col-md-3"
+          >
+            <label>
+              State
+            </label>
+            <input
+              className="form-control"
+              id="inputZip"
+              readOnly={true}
+              type="text"
+              value=""
+            />
+          </div>
+          <div
+            className="form-group col-md-3"
+          >
+            <label>
+              Employees
+            </label>
+            <input
+              className="form-control"
+              id="inputZip"
+              readOnly={true}
+              type="text"
+              value=""
+            />
+          </div>
+          <div
+            className="form-group col-md-3"
+          >
+            <label>
+              Sector
+            </label>
+            <input
+              className="form-control"
+              id="inputZip"
+              readOnly={true}
+              type="text"
+              value=""
+            />
+          </div>
+        </div>
+        <br />
+        <div
+          className="col-md-6 mb-3 input-group"
+        >
+          <span
+            className="input-group-text"
+            id="basic-addon2"
+          >
+            $ticker
+          </span>
+          <span
+            className="input-group-text"
+            id="basic-addon2"
+          >
+            Amount
+          </span>
+          <button
+            className="btn btn-outline-secondary"
+            disabled={false}
+            onClick={[Function]}
+            type="button"
+          >
+            1
+          </button>
+          <button
+            className="btn btn-outline-secondary"
+            disabled={false}
+            onClick={[Function]}
+            type="button"
+          >
+            10
+          </button>
+          <button
+            className="btn btn-outline-secondary"
+            disabled={false}
+            onClick={[Function]}
+            type="button"
+          >
+            100
+          </button>
+          <button
+            className="btn btn-outline-secondary"
+            disabled={false}
+            onClick={[Function]}
+            type="button"
+          >
+            1000
+          </button>
+          <input
+            aria-describedby="basic-addon2"
+            aria-label="Enter Amount to Purchase or Sell"
+            className="form-control"
+            id="input-amount"
+            onChange={[Function]}
+            placeholder="Enter Amount to Purchase or Sell"
+          />
+          <button
+            className="btn btn-outline-success"
+            disabled={false}
+            onClick={[Function]}
+            type="button"
+          >
+            Purchase
+          </button>
+          <button
+            className="btn btn-outline-danger"
+            disabled={false}
+            onClick={[Function]}
+            type="button"
+          >
+            Sell
+          </button>
+        </div>
+        <hr />
+        <div
+          className="col-md-6 mb-3 input-group"
+        >
+          <span
+            className="input-group-text"
+            id="total-stock-amount"
+          >
+            Account Value: $0
+          </span>
+          <span
+            className="input-group-text"
+            id="account-value"
+          >
+            $ticker Owned: 0
+          </span>
+          <span
+            className="input-group-text"
+            id="estimated-value"
+          >
+            Estimated Value of Transaction: $0
+          </span>
+        </div>
+      </form>
+    </div>
+  </div>,
+  <br />,
+  <div
+    className="jumbotron"
+  >
+    <div
+      className="container table-form"
+    >
+      <form>
+        <h2>
+          Similar Stocks 
+        </h2>
+        <hr
+          className="colorgraph"
+        />
+        <table
+          className="table table-striped table-bordered table-hover"
+        >
+          <thead>
+            <tr>
+              <th>
+                Stock Ticker
+              </th>
+            </tr>
+          </thead>
+          <tbody />
+        </table>
+      </form>
+    </div>
+  </div>,
+]
+`;

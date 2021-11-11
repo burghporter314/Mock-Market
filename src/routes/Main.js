@@ -51,13 +51,14 @@ const MainPage = (props) => {
         for(const [key, value] of Object.entries(stocks)) {
             rows.push({
                 0: key.toUpperCase(),
-                1: "$" + value.totalProfit.toFixed(2),
-                2: "$" + value.currentProfit.toFixed(2),
-                3: "$" + value.soldProfit.toFixed(2),
-                4: "$" + value.c.toFixed(2),
-                5: "$" + value.h.toFixed(2),
-                6: "$" + value.l.toFixed(2),
-                7: "$" + value.o.toFixed(2),
+                1: value.totalStockAmount,
+                2: "$" + value.totalProfit.toFixed(2),
+                3: "$" + value.currentProfit.toFixed(2),
+                4: "$" + value.soldProfit.toFixed(2),
+                5: "$" + value.c.toFixed(2),
+                6: "$" + value.h.toFixed(2),
+                7: "$" + value.l.toFixed(2),
+                8: "$" + value.o.toFixed(2),
             });
         }
         return rows;
@@ -130,7 +131,7 @@ const MainPage = (props) => {
                     <h2>Transactions </h2>
                     <hr className="colorgraph"></hr>
                     <TransactionTable
-                    headers={["Stock Ticker", "Total Profit", "Current Profit", "Sold Profit", "Current Price", "High Price", "Low Price", "Open Price"]}
+                    headers={["Stock Ticker", "Amount", "Total Profit", "Current Profit", "Sold Profit", "Current Price", "High Price", "Low Price", "Open Price"]}
                     rows={getRows(initState.stocks)}
                     // We need a function that returns a function since the ticker is only known in the transaction table component.
                     processRowClick={(ticker) => () => history.push(`/info?ticker=${ticker}`)}>
