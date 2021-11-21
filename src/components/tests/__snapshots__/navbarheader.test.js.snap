@@ -27,7 +27,7 @@ exports[`should match snapshot 1`] = `
     </div>
     <a
       className="navbar-brand"
-      href="#home"
+      href="/main"
     >
       Mock Market
     </a>
@@ -53,21 +53,30 @@ exports[`should match snapshot 1`] = `
       >
         <a
           className="nav-link"
-          data-rb-event-key="/main"
+          data-rr-ui-event-key="/main"
+          disabled={false}
           href="/main"
           onClick={[Function]}
-          onKeyDown={[Function]}
         >
           Dashboard
         </a>
         <a
           className="nav-link"
-          data-rb-event-key="/search"
+          data-rr-ui-event-key="/search"
+          disabled={false}
           href="/search"
           onClick={[Function]}
-          onKeyDown={[Function]}
         >
           Search
+        </a>
+        <a
+          className="nav-link"
+          data-rr-ui-event-key="/transfer"
+          disabled={false}
+          href="/transfer"
+          onClick={[Function]}
+        >
+          Transfer
         </a>
       </div>
     </div>

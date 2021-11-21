@@ -8,6 +8,7 @@ import SearchPage from './routes/Search';
 import NavbarHeader from './components/NavbarHeader';
 import { useAuth0 } from "@auth0/auth0-react";
 import InfoPage from './routes/Info';
+import TransferPage from './routes/Transfer';
 
 const App = () => {
   const {isLoading, user} = useAuth0();
@@ -56,6 +57,16 @@ const App = () => {
               <React.Fragment>
                 <NavbarHeader />
                 <InfoPage {...props} />
+              </React.Fragment>
+            );
+          }
+        }/>
+        <Route exact path="/transfer" render={
+          (props) => {
+            return(
+              <React.Fragment>
+                <NavbarHeader />
+                <TransferPage {...props} />
               </React.Fragment>
             );
           }

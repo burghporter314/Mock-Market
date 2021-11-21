@@ -1,0 +1,124 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should match snapshot 1`] = `
+Array [
+  <div
+    className="jumbotron"
+    style={
+      Object {
+        "margin": "30px",
+      }
+    }
+  >
+    <div
+      className="container main-form"
+    >
+      <form>
+        <h2>
+          Transfer Funds
+        </h2>
+        <br />
+        <div
+          className="col-md-6 mb-3 input-group"
+        >
+          <span
+            className="input-group-text"
+            id="basic-addon2"
+          >
+            Amount
+          </span>
+          <button
+            className="btn btn-outline-secondary"
+            disabled={false}
+            onClick={[Function]}
+            type="button"
+          >
+            $1
+          </button>
+          <button
+            className="btn btn-outline-secondary"
+            disabled={false}
+            onClick={[Function]}
+            type="button"
+          >
+            $10
+          </button>
+          <button
+            className="btn btn-outline-secondary"
+            disabled={false}
+            onClick={[Function]}
+            type="button"
+          >
+            $100
+          </button>
+          <button
+            className="btn btn-outline-secondary"
+            disabled={false}
+            onClick={[Function]}
+            type="button"
+          >
+            $1000
+          </button>
+          <span
+            className="input-group-text"
+            id="total-stock-amount"
+          >
+            $
+          </span>
+          <input
+            aria-describedby="basic-addon2"
+            aria-label="Enter Amount"
+            className="form-control"
+            id="input-amount"
+            onChange={[Function]}
+            placeholder="Enter Amount"
+          />
+          <button
+            className="btn btn-outline-success"
+            disabled={false}
+            onClick={[Function]}
+            type="button"
+          >
+            Deposit
+          </button>
+          <button
+            className="btn btn-outline-danger"
+            disabled={false}
+            onClick={[Function]}
+            type="button"
+          >
+            Withdrawal
+          </button>
+        </div>
+        <hr />
+        <div
+          className="col-md-6 mb-3 input-group"
+        >
+          <span
+            className="input-group-text"
+            id="total-stock-amount"
+          >
+            Account Value: $0
+          </span>
+          <span
+            className="input-group-text"
+            id="estimated-value-deposit"
+          >
+            After Deposit: $0
+          </span>
+          <span
+            className="input-group-text"
+            id="estimated-value-withdrawal"
+          >
+            After Withdrawal: $0
+          </span>
+        </div>
+      </form>
+    </div>
+  </div>,
+  <br />,
+  <div
+    className="toast-container position-absolute top-50 start-50 translate-middle p-3"
+  />,
+]
+`;

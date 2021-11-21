@@ -285,11 +285,11 @@ Array [
           </button>
           <input
             aria-describedby="basic-addon2"
-            aria-label="Enter Amount to Purchase or Sell"
+            aria-label="Enter Amount"
             className="form-control"
             id="input-amount"
             onChange={[Function]}
-            placeholder="Enter Amount to Purchase or Sell"
+            placeholder="Enter Amount"
           />
           <button
             className="btn btn-outline-success"
@@ -363,5 +363,8 @@ Array [
       </form>
     </div>
   </div>,
+  <div
+    className="toast-container position-absolute top-50 start-50 translate-middle p-3"
+  />,
 ]
 `;

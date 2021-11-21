@@ -27,7 +27,7 @@ Array [
       <button
         className="btn btn-outline-success"
         disabled={false}
-        id="button-addon2"
+        id="search"
         onClick={[Function]}
         type="button"
       >
@@ -63,5 +63,8 @@ Array [
       <tbody />
     </table>
   </div>,
+  <div
+    className="toast-container position-absolute bottom-0 start-50 translate-middle-x p-3"
+  />,
 ]
 `;

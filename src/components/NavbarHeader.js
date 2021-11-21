@@ -15,12 +15,13 @@ const NavbarHeader = () => {
                 <img className="col-lg-6 img-fluid w-100 login-image center-block" src={logo} style={{"maxWidth": "40px"}}></img>
             </a>
         </Nav>
-        <Navbar.Brand href="#home">Mock Market</Navbar.Brand>
+        <Navbar.Brand href="/main">Mock Market</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
                 <Nav.Link href="/main">Dashboard</Nav.Link>
                 <Nav.Link href="/search">Search</Nav.Link>
+                <Nav.Link href="/transfer">Transfer</Nav.Link>
             </Nav>
             {user &&
                 <React.Fragment>

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Redirect, useHistory } from 'react-router-dom';
-import { Button, InputGroup, FormControl } from 'react-bootstrap';
+import { InputGroup, FormControl, Button, Toast } from 'react-bootstrap';
+import ToastContainer from 'react-bootstrap/ToastContainer'
 
 import { useAuth0 } from '@auth0/auth0-react';
 import TransactionTable from '../components/TransactionTable';
@@ -78,10 +79,18 @@ const InfoPage = (props) => {
 
         // Edge cases
         if(amount * initState.current > initState.account.total) {
-            alert("You can't purchase more than account value");
+            setToastState({
+                visible: true,
+                message: "You can't purchase more than account value",
+                bg: "danger",
+            })
             return;
         } else if(amount <= 0) {
-            alert("Amount must be a positive number");
+            setToastState({
+                visible: true,
+                message: "Amount must be a positive number",
+                bg: "danger",
+            })
             return;
         }
 
@@ -92,9 +101,20 @@ const InfoPage = (props) => {
             }
         })
         .then(responseJson => responseJson.json())
-        .then(responseBody => {alert("Purchase Successful")})
+        .then(responseBody => {
+            setToastState({
+                visible: true,
+                message: "Purchase was Successful",
+                bg: "success",
+            })
+            getTickerAndAccountDetails()
+        })
         .catch(error => {
-            console.log(error);
+            setToastState({
+                visible: true,
+                message: "Purchase failed: " + error,
+                bg: "danger",
+            })
         });
     }
 
@@ -103,10 +123,18 @@ const InfoPage = (props) => {
 
         //edge cases
         if(amount > initState.amountOwned) {
-            alert("You can't sell more stocks than what you own.");
+            setToastState({
+                visible: true,
+                message: "You can't sell more stocks than what you own",
+                bg: "danger",
+            })
             return;
         } else if(amount <= 0) {
-            alert("Amount must be a positive number");
+            setToastState({
+                visible: true,
+                message: "Amount must be a positive number",
+                bg: "danger",
+            })
             return;
         }
 
@@ -117,9 +145,20 @@ const InfoPage = (props) => {
             }
         })
         .then(responseJson => responseJson.json())
-        .then(responseBody => {alert("Sale Successful")})
+        .then(responseBody => {
+            setToastState({
+                visible: true,
+                message: "Sale was Successful",
+                bg: "success",
+            })
+            getTickerAndAccountDetails();
+        })
         .catch(error => {
-            console.log(error);
+            setToastState({
+                visible: true,
+                message: "Sale failed: " + error,
+                bg: "danger",
+            })
         });
     }
 
@@ -138,7 +177,7 @@ const InfoPage = (props) => {
 
     const updateAmount = (amount) => {
         document.getElementById('input-amount').value = `${amount}`
-        document.getElementById('estimated-value').innerHTML = `${"Estimated Value: $" + (initState.current * amount).toLocaleString()}`;
+        document.getElementById('estimated-value').innerHTML = `${"Estimated Value of Transaction: $" + (initState.current * amount).toLocaleString()}`;
     }
 
     // Make the state the same as the expected response on the backend.
@@ -163,6 +202,12 @@ const InfoPage = (props) => {
         employees: "",
         sector: "",
         similar: [],
+    });
+
+    const [toastState, setToastState] = useState({
+        message: "",
+        visible: false,
+        bg: "light",
     });
 
     // We need to get the updated account details every 20 seconds.
@@ -268,8 +313,8 @@ const InfoPage = (props) => {
                             onClick={() => updateAmount(1000)}
                         >1000</Button>
                         <FormControl
-                            placeholder="Enter Amount to Purchase or Sell"
-                            aria-label="Enter Amount to Purchase or Sell"
+                            placeholder="Enter Amount"
+                            aria-label="Enter Amount"
                             aria-describedby="basic-addon2"
                             id="input-amount"
                             onChange={(e) => updateAmount(e.target.value)}
@@ -300,6 +345,20 @@ const InfoPage = (props) => {
                 </form>
             </div>
         </div>
+        <ToastContainer className="p-3" position={"middle-center"}>
+          <Toast onClose={() => setToastState({message: "", visible: false})} show={toastState.visible} delay={3000} bg={toastState.bg} autohide>
+            <Toast.Header closeButton={false}>
+              <img
+                src="holder.js/20x20?text=%20"
+                className="rounded me-2"
+                alt=""
+              />
+              <strong className="me-auto">Mock Market</strong>
+              <small>Now</small>
+            </Toast.Header>
+            <Toast.Body>{toastState.message}</Toast.Body>
+          </Toast>
+        </ToastContainer>
     </React.Fragment>
     ));
 }

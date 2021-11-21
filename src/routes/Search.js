@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { Redirect, useHistory } from 'react-router-dom';
 import { useAuth0 } from '@auth0/auth0-react';
-import { InputGroup, FormControl, Button } from 'react-bootstrap';
+import { InputGroup, FormControl, Button, Toast } from 'react-bootstrap';
+import ToastContainer from 'react-bootstrap/ToastContainer'
 import TransactionTable from '../components/TransactionTable';
 
 const SearchPage = (props) => {
@@ -28,10 +29,22 @@ const SearchPage = (props) => {
             }
         })
         .then(responseJson => responseJson.json())
-        .then(responseBody => {setState({
-            results: responseBody.results,
-        })})
+        .then(responseBody => {
+            setState({
+                results: responseBody.results,
+            })
+            setToastState({
+                visible: true,
+                message: "Successfully Retrieved Results",
+                bg: "success",
+            })
+        })
         .catch(error => {
+            setToastState({
+                visible: true,
+                message: "Was not able to retrieve results: " + error,
+                bg: "danger",
+            })
             console.log(error);
         });
     }
@@ -59,6 +72,12 @@ const SearchPage = (props) => {
         results: [],
     });
 
+    const [toastState, setToastState] = useState({
+        message: "",
+        visible: false,
+        bg: "light",
+    });
+
     return(
     isAuthenticated && (
     <React.Fragment>
@@ -74,7 +93,7 @@ const SearchPage = (props) => {
                     aria-describedby="basic-addon2"
                     id="inputTicker"
                 />
-                <Button variant="outline-success" id="button-addon2" onClick={getTickerResults}>
+                <Button variant="outline-success" id="search" onClick={getTickerResults}>
                     Search
                 </Button>
             </InputGroup>
@@ -85,6 +104,20 @@ const SearchPage = (props) => {
                 processRowClick={(ticker) => () => history.push(`/info?ticker=${ticker}`)}>
             </TransactionTable>
         </div>
+        <ToastContainer className="p-3" position={"bottom-center"}>
+          <Toast onClose={() => setToastState({message: "", visible: false})} show={toastState.visible} delay={3000} bg={toastState.bg} autohide>
+            <Toast.Header closeButton={false}>
+              <img
+                src="holder.js/20x20?text=%20"
+                className="rounded me-2"
+                alt=""
+              />
+              <strong className="me-auto">Mock Market</strong>
+              <small>Now</small>
+            </Toast.Header>
+            <Toast.Body>{toastState.message}</Toast.Body>
+          </Toast>
+        </ToastContainer>
     </React.Fragment>
     ));
 }
