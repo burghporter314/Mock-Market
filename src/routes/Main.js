@@ -35,7 +35,7 @@ const MainPage = (props) => {
         .catch(error => {
             setToastState({
                 visible: true,
-                message: "Could not update account details: " + error,
+                message: "Could not update account details: API Limit Reached",
                 bg: "danger",
             });
             console.log(error);

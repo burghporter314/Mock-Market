@@ -65,7 +65,11 @@ const InfoPage = (props) => {
                 })
             })
             .catch(error => {
-                console.log(error);
+                setToastState({
+                    visible: true,
+                    message: "API Limit Reached. System will try again in a few seconds.",
+                    bg: "danger",
+                })
             });
             })
         .catch(error => {
